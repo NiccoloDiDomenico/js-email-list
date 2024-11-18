@@ -1,6 +1,7 @@
 // Elements
 const emailListElements = document.getElementById("email-list")
-console.log(emailListElements);
+const btnElement = document.querySelector(`.btn`)
+console.log(emailListElements, btnElement);
 
 
 // Logica
@@ -16,6 +17,11 @@ for (let i = 0; i < 10; i++) {
         // Inserisco la "currentMail" nell'HTML
         emailListElements.innerHTML += `<li>${currentMail}</li>`;
         // console.log(emailListElements);
+
+        // Al click sul bottone refresha la pagina
+        btnElement.addEventListener("click", function() {
+            location.reload();
+        });
     });  
 };
 
